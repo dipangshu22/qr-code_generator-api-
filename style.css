@@ -1,0 +1,57 @@
+body{
+    background-color: rgb(159, 181, 182);
+}
+
+.container{
+    border-radius: 10px;
+    margin: 60px auto;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 400px;
+    background-color: rgb(248, 239, 227);
+}
+input{
+    margin-top: 20px;
+    border: 2px solid blue;
+    border-radius: 5px ;
+    outline: 0;
+    font-weight: 200;
+    width: 350px;
+    height: 40px;
+}
+.shake_box{
+    animation: shake 0.1s 10;
+}
+@keyframes shake{
+    0%{transform: translateX(0);
+
+    }
+    25%{transform: translateX(-2px);
+
+    }
+    50%{transform: translateX(0);
+
+    }
+    75%{transform: translateX(2px);
+
+    }
+    100%{transform: translateX(0);
+
+    }
+}
+
+button{
+    border: 0;
+    background-color: azure;
+    height: 30px;
+    width: 100px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.image{
+    margin-top: 20px;
+}

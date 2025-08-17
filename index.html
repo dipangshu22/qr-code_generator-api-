@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="qrcode">
+            <input type="text" placeholder="type here" id="qrtext">
+            <div class="image" id="image">
+                <img src="" alt="" id="qrimage">
+            </div>
+            <button onclick="generate()">generate qr</button>
+        </div>
+    </div>
+    <script>
+        let qrtext=document.getElementById("qrtext")
+        let image=document.getElementById("qrimage")
+
+        function generate(){
+            
+            if(qrtext.value.length>0){
+                image.src= `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${qrtext.value}`
+            }
+            else{
+                qrtext.classList.add('shake_box')
+                setTimeout(()=>{
+                    qrtext.classList.remove('shake_box')
+                },1000)
+
+            }
+            
+
+
+        }
+
+    </script>
+</body>
+</html>
