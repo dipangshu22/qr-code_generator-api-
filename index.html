@@ -24,6 +24,7 @@
             
             if(qrtext.value.length>0){
                 image.src= `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${qrtext.value}`
+                qrtext.value=""
             }
             else{
                 qrtext.classList.add('shake_box')
